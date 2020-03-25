@@ -40,19 +40,28 @@
     @extend %center;
     flex-direction: column;
     font-size: 2em;
+
+    width: calc(100% - 2rem);
     .container-dials {
-      display: flex;
       padding: 1rem;
+      @extend %center;
+      flex-wrap: wrap;
+      width: calc(100% - 2rem);
     }
   }
 
   .container-head {
+    width: 100%;
+    text-align: center;
     h1 {
       font-size: 4rem;
     }
-    img {
-      display: inline-block;
-      height: 100%;
-    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container .container-country {
+    width: calc(100% - 2rem);
+    padding: 1rem;
   }
 }

@@ -2,7 +2,7 @@
   <div class="container-head">
     <h1>COVID 19</h1>
   </div>
-  <div class="container-country">
+  <div class="container-country" *ngIf="selectedCountry">
     <div class="country-image">
       <img [src]="selectedCountry.countryInfo.flag" alt="" />
     </div>
