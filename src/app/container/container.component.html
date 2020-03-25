@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="container-head">
+    <h1>COVID 19</h1>
+  </div>
+  <div class="container-country">
+    <div class="country-image">
+      <img [src]="selectedCountry.countryInfo.flag" alt="" />
+    </div>
+    <div class="country-select">
+      <ng-select
+        [items]="allCountryData"
+        bindLabel="country"
+        placeholder="Select Country"
+        [(ngModel)]="selectedCountry"
+        (change)="handleCountryChange()"
+      >
+      </ng-select>
+    </div>
+  </div>
+  <div class="container-body">
+    <div class="dial-header">
+      Total Cases
+    </div>
+    <div class="container-dials">
+      <ng-container *ngFor="let item of casesArray; let i = index">
+        <app-dial [data]="item"></app-dial>
+      </ng-container>
+    </div>
+  </div>
+  <div class="container-body">
+    <div class="dial-header">
+      Active Cases
+    </div>
+    <div class="container-dials">
+      <ng-container *ngFor="let item of activeArray; let i = index">
+        <app-dial [data]="item"></app-dial>
+      </ng-container>
+    </div>
+  </div>
+  <div class="container-body">
+    <div class="dial-header">
+      Deaths
+    </div>
+    <div class="container-dials">
+      <ng-container *ngFor="let item of deathArray; let i = index">
+        <app-dial [data]="item"></app-dial>
+      </ng-container>
+    </div>
+  </div>
+  <div class="container-body">
+    <div class="dial-header">
+      Recovered
+    </div>
+    <div class="container-dials">
+      <ng-container *ngFor="let item of recoverArray; let i = index">
+        <app-dial [data]="item"></app-dial>
+      </ng-container>
+    </div>
+  </div>
+  <div class="container-body">
+    <div class="dial-header">
+      Cases Today
+    </div>
+    <div class="container-dials">
+      <ng-container *ngFor="let item of todayCasesArray; let i = index">
+        <app-dial [data]="item"></app-dial>
+      </ng-container>
+    </div>
+  </div>
+  <div class="container-body">
+    <div class="dial-header">
+      Deaths Today
+    </div>
+    <div class="container-dials">
+      <ng-container *ngFor="let item of todayDeathArray; let i = index">
+        <app-dial [data]="item"></app-dial>
+      </ng-container>
+    </div>
+  </div>
+</div>
