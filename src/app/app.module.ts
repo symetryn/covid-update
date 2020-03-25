@@ -3,7 +3,6 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { CountoModule } from "angular2-counto";
 import { DialComponent } from "./dial/dial.component";
 import { ContainerComponent } from "./container/container.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -17,7 +16,6 @@ import { FormsModule } from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CountoModule,
     BrowserAnimationsModule,
     NgSelectModule,
     FormsModule
