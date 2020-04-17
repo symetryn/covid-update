@@ -4,10 +4,10 @@ import { HttpHeaders, HttpClient, HttpParams } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class ApiService {
-  endpoint = "https://corona.lmao.ninja";
+  endpoint = "https://corona.lmao.ninja/v2";
 
   countries: string;
   constructor(private http: HttpClient) {}
