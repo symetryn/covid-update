@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [class.shadow]="smallMode">
   <div class="container-head">
     <h1>COVID 19</h1>
   </div>
@@ -17,13 +17,14 @@
       </ng-select>
     </div>
   </div>
+
   <div class="container-body">
     <div class="dial-header">
       Total Cases
     </div>
     <div class="container-dials">
       <ng-container *ngFor="let item of casesArray; let i = index">
-        <app-dial [data]="item"></app-dial>
+        <app-dial [data]="item" [shadow]="smallMode"></app-dial>
       </ng-container>
     </div>
   </div>
@@ -33,7 +34,7 @@
     </div>
     <div class="container-dials">
       <ng-container *ngFor="let item of activeArray; let i = index">
-        <app-dial [data]="item"></app-dial>
+        <app-dial [data]="item" [shadow]="smallMode"></app-dial>
       </ng-container>
     </div>
   </div>
@@ -43,7 +44,7 @@
     </div>
     <div class="container-dials">
       <ng-container *ngFor="let item of deathArray; let i = index">
-        <app-dial [data]="item"></app-dial>
+        <app-dial [data]="item" [shadow]="smallMode"></app-dial>
       </ng-container>
     </div>
   </div>
@@ -53,7 +54,7 @@
     </div>
     <div class="container-dials">
       <ng-container *ngFor="let item of recoverArray; let i = index">
-        <app-dial [data]="item"></app-dial>
+        <app-dial [data]="item" [shadow]="smallMode"></app-dial>
       </ng-container>
     </div>
   </div>
@@ -63,7 +64,7 @@
     </div>
     <div class="container-dials">
       <ng-container *ngFor="let item of todayCasesArray; let i = index">
-        <app-dial [data]="item"></app-dial>
+        <app-dial [data]="item" [shadow]="smallMode"></app-dial>
       </ng-container>
     </div>
   </div>
@@ -73,7 +74,7 @@
     </div>
     <div class="container-dials">
       <ng-container *ngFor="let item of todayDeathArray; let i = index">
-        <app-dial [data]="item"></app-dial>
+        <app-dial [data]="item" [shadow]="smallMode"></app-dial>
       </ng-container>
     </div>
   </div>

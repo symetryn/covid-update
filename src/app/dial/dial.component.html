@@ -1,4 +1,4 @@
-<div class="dial" [@simpleFadeAnimation]="'in'">
+<div class="dial" [class.no-shadow]="shadow" [@simpleFadeAnimation]="'in'">
   <!-- [@popup]="{ value: visible ? 'visible' : 'hidden', params: { delay: delay } }" -->
   <span class="dial-text">
     {{ data }}

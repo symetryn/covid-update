@@ -4,7 +4,7 @@ import {
   state,
   style,
   animate,
-  transition
+  transition,
 } from "@angular/animations";
 
 @Component({
@@ -18,13 +18,14 @@ import {
 
       transition(":enter", [style({ opacity: 0 }), animate(600)]),
 
-      transition(":leave", animate(600, style({ opacity: 0 })))
-    ])
-  ]
+      transition(":leave", animate(600, style({ opacity: 0 }))),
+    ]),
+  ],
 })
 export class DialComponent implements OnInit {
   @Input() data: string;
 
+  @Input() shadow: boolean;
   constructor() {}
 
   ngOnInit(): void {}
