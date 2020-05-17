@@ -51,7 +51,7 @@ export class ContainerComponent implements OnInit {
   }
 
   handleDigitSize(cases: string) {
-    if (cases?.length > 4) {
+    if (cases?.length > 4 && window.innerWidth < 768) {
       this.smallMode = true;
     } else {
       this.smallMode = false;
