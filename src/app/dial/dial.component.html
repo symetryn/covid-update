@@ -1,7 +1,7 @@
 <div class="dial" [class.no-shadow]="shadow" [@simpleFadeAnimation]="'in'">
   <!-- [@popup]="{ value: visible ? 'visible' : 'hidden', params: { delay: delay } }" -->
   <span class="dial-text">
-    {{ data }}
+    {{ nepal ? (data | nepali) : data }}
   </span>
 </div>
 <!-- <button (click)="toggle()">toggle</button> -->

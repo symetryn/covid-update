@@ -12,6 +12,7 @@ import { FormsModule } from "@angular/forms";
 import { FooterComponent } from "./footer/footer.component";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
+import { NepaliPipe } from './nepali.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { environment } from "../environments/environment";
     DialComponent,
     ContainerComponent,
     FooterComponent,
+    NepaliPipe,
   ],
   imports: [
     BrowserModule,

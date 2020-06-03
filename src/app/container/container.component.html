@@ -1,6 +1,6 @@
 <div class="container" [class.shadow]="smallMode">
   <div class="container-head">
-    <h1>COVID 19</h1>
+    <h1 i18n>COVID 19</h1>
   </div>
   <div class="container-country" *ngIf="selectedCountry">
     <div class="country-image">
@@ -19,62 +19,86 @@
   </div>
 
   <div class="container-body">
-    <div class="dial-header">
-      Total Cases
+    <div class="dial-header" i18n>
+      {{ isNepal() ? "सबै केस" : "Total Cases" }}
     </div>
     <div class="container-dials">
       <ng-container *ngFor="let item of casesArray; let i = index">
-        <app-dial [data]="item" [shadow]="smallMode"></app-dial>
+        <app-dial
+          [data]="item"
+          [nepal]="isNepal()"
+          [shadow]="smallMode"
+        ></app-dial>
       </ng-container>
     </div>
   </div>
   <div class="container-body">
-    <div class="dial-header">
-      Active Cases
+    <div class="dial-header" i18n>
+      {{ isNepal() ? "सक्रिय केस" : " Active Cases" }}
     </div>
     <div class="container-dials">
       <ng-container *ngFor="let item of activeArray; let i = index">
-        <app-dial [data]="item" [shadow]="smallMode"></app-dial>
+        <app-dial
+          [data]="item"
+          [nepal]="isNepal()"
+          [shadow]="smallMode"
+        ></app-dial>
       </ng-container>
     </div>
   </div>
   <div class="container-body">
-    <div class="dial-header">
-      Deaths
+    <div class="dial-header" i18n>
+      {{ isNepal() ? "मृत्यु" : "Deaths" }}
     </div>
     <div class="container-dials">
       <ng-container *ngFor="let item of deathArray; let i = index">
-        <app-dial [data]="item" [shadow]="smallMode"></app-dial>
+        <app-dial
+          [data]="item"
+          [nepal]="isNepal()"
+          [shadow]="smallMode"
+        ></app-dial>
       </ng-container>
     </div>
   </div>
   <div class="container-body">
-    <div class="dial-header">
-      Recovered
+    <div class="dial-header" i18n>
+      {{ isNepal() ? "निको" : " Recovered" }}
     </div>
     <div class="container-dials">
       <ng-container *ngFor="let item of recoverArray; let i = index">
-        <app-dial [data]="item" [shadow]="smallMode"></app-dial>
+        <app-dial
+          [data]="item"
+          [nepal]="isNepal()"
+          [shadow]="smallMode"
+        ></app-dial>
       </ng-container>
     </div>
   </div>
   <div class="container-body">
-    <div class="dial-header">
-      Cases Today
+    <div class="dial-header" i18n>
+      {{ isNepal() ? " आज संक्रमित" : "Cases Today" }}
     </div>
     <div class="container-dials">
       <ng-container *ngFor="let item of todayCasesArray; let i = index">
-        <app-dial [data]="item" [shadow]="smallMode"></app-dial>
+        <app-dial
+          [data]="item"
+          [nepal]="isNepal()"
+          [shadow]="smallMode"
+        ></app-dial>
       </ng-container>
     </div>
   </div>
   <div class="container-body">
-    <div class="dial-header">
-      Deaths Today
+    <div class="dial-header" i18n>
+      {{ isNepal() ? "आज मृत्यु" : "Deaths Today" }}
     </div>
     <div class="container-dials">
       <ng-container *ngFor="let item of todayDeathArray; let i = index">
-        <app-dial [data]="item" [shadow]="smallMode"></app-dial>
+        <app-dial
+          [data]="item"
+          [nepal]="isNepal()"
+          [shadow]="smallMode"
+        ></app-dial>
       </ng-container>
     </div>
   </div>

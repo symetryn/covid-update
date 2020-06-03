@@ -26,7 +26,12 @@ export class DialComponent implements OnInit {
   @Input() data: string;
 
   @Input() shadow: boolean;
+
+  @Input() nepal: boolean;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.nepal);
+  }
 }

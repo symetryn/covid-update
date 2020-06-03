@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="2d0a0075aacde6a43615796495154228bad80ecc" datatype="html">
+        <source>COVID 19</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container/container.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b6db602a2fddb5a2b6074cb5d03c399c0cfa1e32" datatype="html">
+        <source>
+      सबै केस
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container/container.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1108289e49d02f5ba991076e90f78e375c3ff57e" datatype="html">
+        <source>
+      सक्रिय केस
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container/container.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="417ae34fe5f394447a41de4f83f8739ffdb785b6" datatype="html">
+        <source>
+      मृत्यु
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container/container.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="98dd61d2449befb3363db6248b76b983a5c8ee0a" datatype="html">
+        <source>
+      निको
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container/container.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="83054a955893eda6a0b65b5555204de85f69a475" datatype="html">
+        <source>
+     आज संक्रमित
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container/container.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="464a1a9f9893dae20542e0785644c4dcbbba6aea" datatype="html">
+        <source>
+     आज मृत्यु
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container/container.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
