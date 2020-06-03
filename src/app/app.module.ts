@@ -9,12 +9,17 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule } from "@angular/common/http";
 import { NgSelectModule } from "@ng-select/ng-select";
 import { FormsModule } from "@angular/forms";
-import { FooterComponent } from './footer/footer.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import { FooterComponent } from "./footer/footer.component";
+import { ServiceWorkerModule } from "@angular/service-worker";
+import { environment } from "../environments/environment";
 
 @NgModule({
-  declarations: [AppComponent, DialComponent, ContainerComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    DialComponent,
+    ContainerComponent,
+    FooterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,9 +27,11 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     NgSelectModule,
     FormsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register("ngsw-worker.js", {
+      enabled: environment.production,
+    }),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{ provide: "googleTagManagerId", useValue: "GTM-MML8J9M" }],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

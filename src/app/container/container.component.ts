@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ApiService } from "../api.service";
+import { Router, NavigationEnd } from "@angular/router";
+import { GoogleTagManagerService } from "angular-google-tag-manager";
 
 @Component({
   selector: "app-container",
@@ -20,7 +22,11 @@ export class ContainerComponent implements OnInit {
   allCountryData: Array<CountryData>;
   smallMode: boolean = false;
 
-  constructor(public api: ApiService) {}
+  constructor(
+    public api: ApiService,
+    public router: Router,
+    private gtmService: GoogleTagManagerService
+  ) {}
 
   ngOnInit(): void {
     // this.smallMode = true;
@@ -32,6 +38,15 @@ export class ContainerComponent implements OnInit {
       )[0];
 
       this.handleCountryChange();
+    });
+    this.router.events.forEach((item) => {
+      if (item instanceof NavigationEnd) {
+        const gtmTag = {
+          event: "page",
+          pageName: item.url,
+        };
+        this.gtmService.pushTag(gtmTag);
+      }
     });
   }
 
