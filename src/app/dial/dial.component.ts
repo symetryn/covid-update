@@ -31,7 +31,5 @@ export class DialComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.nepal);
-  }
+  ngOnInit(): void {}
 }

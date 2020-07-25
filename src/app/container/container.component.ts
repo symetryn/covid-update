@@ -51,7 +51,7 @@ export class ContainerComponent implements OnInit {
   }
 
   isNepal() {
-    return this.selectedCountry.country == "Nepal";
+    return this.selectedCountry?.country == "Nepal";
   }
 
   getDigitArray(i: Number) {
