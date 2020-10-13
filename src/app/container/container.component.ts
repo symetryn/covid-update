@@ -24,9 +24,9 @@ export class ContainerComponent implements OnInit {
 
   constructor(
     public api: ApiService,
-    public router: Router,
-    private gtmService: GoogleTagManagerService
-  ) {}
+    public router: Router
+  ) // private gtmService: GoogleTagManagerService
+  {}
 
   ngOnInit(): void {
     // this.smallMode = true;
@@ -39,15 +39,15 @@ export class ContainerComponent implements OnInit {
 
       this.handleCountryChange();
     });
-    this.router.events.forEach((item) => {
-      if (item instanceof NavigationEnd) {
-        const gtmTag = {
-          event: "page",
-          pageName: item.url,
-        };
-        this.gtmService.pushTag(gtmTag);
-      }
-    });
+    // this.router.events.forEach((item) => {
+    //   if (item instanceof NavigationEnd) {
+    //     const gtmTag = {
+    //       event: "page",
+    //       pageName: item.url,
+    //     };
+    //     this.gtmService.pushTag(gtmTag);
+    //   }
+    // });
   }
 
   isNepal() {

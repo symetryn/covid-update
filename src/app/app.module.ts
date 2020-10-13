@@ -12,7 +12,7 @@ import { FormsModule } from "@angular/forms";
 import { FooterComponent } from "./footer/footer.component";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
-import { NepaliPipe } from './nepali.pipe';
+import { NepaliPipe } from "./nepali.pipe";
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { NepaliPipe } from './nepali.pipe';
       enabled: environment.production,
     }),
   ],
-  providers: [{ provide: "googleTagManagerId", useValue: "GTM-MML8J9M" }],
+  // providers: [{ provide: "googleTagManagerId", useValue: "GTM-MML8J9M" }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
