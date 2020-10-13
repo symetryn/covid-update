@@ -11,6 +11,7 @@
         [items]="allCountryData"
         bindLabel="country"
         placeholder="Select Country"
+        [clearable]="false"
         [(ngModel)]="selectedCountry"
         (change)="handleCountryChange()"
       >
